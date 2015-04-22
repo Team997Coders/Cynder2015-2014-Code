@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.templates.OI;
 import edu.wpi.first.wpilibj.templates.RobotMap;
-import edu.wpi.first.wpilibj.templates.subsystems.Aimer;
+//import edu.wpi.first.wpilibj.templates.subsystems.Aimer;
 import edu.wpi.first.wpilibj.templates.subsystems.DriveTrain;
 
 import edu.wpi.first.wpilibj.templates.subsystems.Gatherer;
@@ -42,7 +42,7 @@ public abstract class CommandBase extends Command {
             RobotMap.LimitSwitchslot,
             RobotMap.LimitSwitchslot2,         
             RobotMap.LatchPunematicslot);
-    public static Aimer myAimer = new Aimer();
+  //  public static Aimer myAimer = new Aimer();
     public static subcompressor subCompressor = new subcompressor(
             RobotMap.compressorSwitchSlot,
             RobotMap.compressorSpikeSlot);

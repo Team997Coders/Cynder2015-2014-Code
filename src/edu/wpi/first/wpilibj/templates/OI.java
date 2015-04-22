@@ -17,7 +17,7 @@ import edu.wpi.first.wpilibj.templates.commands.ToggleGathererPower;
 import edu.wpi.first.wpilibj.templates.commands.UnLatchCommand;
 import edu.wpi.first.wpilibj.templates.commands.GathererToggleAngle;
 import edu.wpi.first.wpilibj.templates.commands.GathererWheelsOutWhileHeld;
-import edu.wpi.first.wpilibj.templates.commands.Lightup;
+//import edu.wpi.first.wpilibj.templates.commands.Lightup;
 import edu.wpi.first.wpilibj.templates.commands.RapidFire;
 import edu.wpi.first.wpilibj.templates.commands.extendGathererOnly;
 import edu.wpi.first.wpilibj.templates.commands.ResetEncoders;
@@ -102,8 +102,9 @@ public class OI {
         ReverseDriveButton = new JoystickButton(Rightstick, 8);
         TankDriveButton = new JoystickButton(Rightstick, 9); 
         
-        
-        CockShooterButton = new JoystickButton(Utilitystick, 1);
+        CockShooterButton = new JoystickButton(Rightstick, 10);
+
+        //CockShooterButton = new JoystickButton(Utilitystick, 1);
         ToggleGatherArms = new JoystickButton(Utilitystick, 2);
         TrussShotButton = new JoystickButton(Utilitystick, 5);
         QuickShotButton = new JoystickButton(Utilitystick, 6);
@@ -111,6 +112,7 @@ public class OI {
         
         //Button Ports
         CockShooterButton.whenPressed(new PrepShooter());
+        
         TrussShotButton.whenPressed(new TrussShot());
         ShooterButton.whenPressed(new Shoot());
         ToggleGathererButton.whenPressed(new ToggleGathererAngleAndPower());
@@ -127,7 +129,7 @@ public class OI {
         ExtendWinch.whileHeld(new winchUpWhileHeld());
         ToggleGatherArms.whenPressed(new GathererToggleAngle());
         QuickShotButton.whenPressed(new RapidFire());
-        LightButton.whenPressed(new Lightup());
+        //LightButton.whenPressed(new Lightup());
         
         //SmartDashboard Buttons
         SmartDashboard.putData("Winch Shooter: ", new PrepShooter());
@@ -145,7 +147,7 @@ public class OI {
         SmartDashboard.putData("drive to ultrasonic distance", new driveUntilUltrasonicDistanceIN());
         SmartDashboard.putData("rapid fire", new RapidFire());
         SmartDashboard.putData("drive to ultrasonic then fire", new DriveToUltrasonicThenFIre());
-        SmartDashboard.putData("LIGHT UP THE ROBOT", new Lightup());
+       // SmartDashboard.putData("LIGHT UP THE ROBOT", new Lightup());
     
     }
 
